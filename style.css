@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
 *,
 *::before,
 *::after{
@@ -7,9 +10,9 @@
 }
 
 :root{
-/* ### Primary */
-
---Pink: hsl(322, 100%, 66%);
+    /* ### Primary */
+    
+    --Pink: hsl(322, 100%, 66%);
 --Light-Pink: hsl(321, 100%, 78%);
 --Light-Red: hsl(0, 100%, 63%);
 
@@ -19,10 +22,20 @@
 --Very-Pale-Blue: hsl(207, 100%, 98%);
 
 --body-padding:4em;
---header-padding:2em;
+--padding:2em;
 
 /* max width for the mini sections images */
 --max-width-img: 500px;
+}
+h1,
+h2,
+h3{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    min-height: 100vh;
 }
 .whole-container{
     min-height: 100vh;
@@ -30,7 +43,7 @@
 header{
     display: flex;
     align-items: center;
-    padding: var(--header-padding);
+    padding: var(--padding);
     justify-content: space-between;
 }
 header button{
@@ -170,19 +183,42 @@ header button{
 }
 footer{
     background-color: var(--Very-Dark-Cyan);
-    padding: 2em;
+    padding: 10em var(--padding);
+    padding-bottom: 0;
+    gap: 4em;
     color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row-reverse;
     position: relative;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 2em 0;
+}
+.phone,.email{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    z-index: 99;
+}
+.contacts span{
+    cursor: pointer;
+}
+.contacts span:hover{
+    text-decoration: underline;
+}
+.footer-logo{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(165deg) brightness(109%) contrast(101%);
+    margin-bottom: 1em;
 }
 footer::before {
     content: '';
     display: block;
     width: 100%;
-    height: 53px;
-    background: url('images/bg-footer-top-mobile.svg') no-repeat center top;
+    height: 100%;
+    background: url('images/bg-footer-top-desktop.svg') no-repeat center top;
     background-size: 100% 53px;
     position: absolute;
     top: -53px;
