@@ -113,25 +113,25 @@ header button{
 }
 .grow-together::before{
     content: "";
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
-    margin-bottom: 12em;
-    background-image: url('images/bg-section-top-desktop-1.svg');
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    top: -112px;
+    left: 0;
+    background: url('images/bg-section-top-desktop-1.svg') no-repeat center top;
+    background-size: 100% 112px;
 }
 .grow-together::after{
     content: "";
+    display: block;
     width: 100%;
-    height: 100%;
+    height: 112px;
     position: absolute;
-    margin-top: 10em;
-    background-image: url('images/bg-section-bottom-desktop-1.svg');
-    background-position: bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
+    bottom: -101px;
+    left: 0;
+    background: url('images/bg-section-bottom-desktop-1.svg') no-repeat center top;
+    background-size: 100% 112px;
 }
 .flowing-conversations{
     flex-direction: row-reverse;
@@ -139,25 +139,25 @@ header button{
 }
 .your-users::before{
     content: "";
+    display: block;
     width: 100%;
     height: 100%;
     position: absolute;
-    margin-bottom: 12em;
-    background-image: url('images/bg-section-top-desktop-2.svg');
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    top: -112px;
+    left: 0;
+    background: url('images/bg-section-top-desktop-2.svg') no-repeat center top;
+    background-size: 100% 112px;
 }
 .your-users::after{
     content: "";
+    display: block;
     width: 100%;
-    height: 100%;
+    height: 112px;
     position: absolute;
-    margin-top: 10em;
-    background-image: url('images/bg-section-bottom-desktop-2.svg');
-    background-position: bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
+    bottom: -101px;
+    left: 0;
+    background: url('images/bg-section-bottom-desktop-2.svg') no-repeat center top;
+    background-size: 100% 112px;
 }
 .ready{
     gap: 1.5em;
@@ -165,26 +165,28 @@ header button{
     margin: 10em 0;
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
 }
 footer{
-    /* background-color: var(--Very-Dark-Cyan); */
+    background-color: var(--Very-Dark-Cyan);
+    padding: 2em;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    position: relative;
 }
-footer::before{
-    content: "";
+footer::before {
+    content: '';
+    display: block;
     width: 100%;
-    height: 100%;
+    height: 53px;
+    background: url('images/bg-footer-top-mobile.svg') no-repeat center top;
+    background-size: 100% 53px;
     position: absolute;
-    margin-bottom: 10em;
-    background-image: url('images/bg-footer-top-desktop.svg');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-repeat: no-repeat;
+    top: -53px;
+    left: 0;
 }
 @media (min-width:1339px){
     .intro-text{
