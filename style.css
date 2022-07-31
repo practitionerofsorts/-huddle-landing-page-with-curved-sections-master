@@ -20,6 +20,9 @@
 
 --body-padding:4em;
 --header-padding:2em;
+
+/* max width for the mini sections images */
+--max-width-img: 500px;
 }
 .whole-container{
     min-height: 100vh;
@@ -51,7 +54,8 @@ header button{
 .intro-text p{
     max-width: 410px;
 }
-.intro-text button{
+/* the intro text button */
+.get-started{
     border: none;
     border-radius: 23px;
     color: white;
@@ -62,7 +66,7 @@ header button{
 .statistics{
     gap: 5em;
     display: flex;
-    margin: 4em 2em;
+    margin: 4em 2em 10em;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -90,6 +94,97 @@ header button{
 } 
 .individual-stats img{
     width: 1.5em;
+}
+/* grow together section */
+.grow-together,.flowing-conversations,.your-users{
+    gap: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    position: relative;
+}
+.grow-together img,.flowing-conversations img,.your-users img{
+    max-width: var(--max-width-img);
+    width: 100%;
+}
+.grow-together,.your-users{
+    background-color: var(--Very-Pale-Blue);
+}
+.grow-together::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-bottom: 12em;
+    background-image: url('images/bg-section-top-desktop-1.svg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.grow-together::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: 10em;
+    background-image: url('images/bg-section-bottom-desktop-1.svg');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.flowing-conversations{
+    flex-direction: row-reverse;
+    margin: 8em 0;
+}
+.your-users::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-bottom: 12em;
+    background-image: url('images/bg-section-top-desktop-2.svg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.your-users::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: 10em;
+    background-image: url('images/bg-section-bottom-desktop-2.svg');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.ready{
+    gap: 1.5em;
+    padding: 2em;
+    margin: 10em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer{
+    /* background-color: var(--Very-Dark-Cyan); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+footer::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-bottom: 10em;
+    background-image: url('images/bg-footer-top-desktop.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 @media (min-width:1339px){
     .intro-text{
