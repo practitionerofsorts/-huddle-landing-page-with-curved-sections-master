@@ -62,10 +62,13 @@ header button{
     align-items: center;
 }
 .intro-text h1{
-    font-size: 2.6em;
+    font-size: 3.6em;
+    line-height: 1.3em;
 }
 .intro-text p{
-    max-width: 410px;
+    line-height: 1.3em;
+    font-size: 2.5rem;
+    margin: 0 3.9em;
 }
 /* the intro text button */
 .get-started{
@@ -85,7 +88,7 @@ header button{
     justify-content: center;
 }
 .statistics-img{
-    max-width: 780px;
+    max-width: 900px;
     width: 100%;
 }
 .statistics-numbers{
@@ -101,13 +104,23 @@ header button{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    gap: 1.5em;
+}
+.individual-stats:nth-child(1):before{
+    content: url("images/icon-communities.svg");
+    width: auto;
+    height: auto;
+    margin-left: -8.5em;
+}
+.individual-stats:nth-child(2):before{
+    content: url("images/icon-messages.svg");
+    width: auto;
+    height: auto;
+    margin-left: -8.5em;
 }
 .individual-stats h1{
-    font-size: 4em;
+    font-size: 4.7em;
 } 
-.individual-stats img{
-    width: 1.5em;
-}
 /* grow together section */
 .grow-together,.flowing-conversations,.your-users{
     gap: 5em;
@@ -116,6 +129,11 @@ header button{
     justify-content: center;
     padding: 3em;
     position: relative;
+    line-height: 1.5em;
+    font-size: 1.5rem;
+}
+.grow-together h2,.flowing-conversations h2,.your-users h2{
+    margin-bottom: 1em;
 }
 .grow-together img,.flowing-conversations img,.your-users img{
     max-width: var(--max-width-img);
@@ -181,6 +199,13 @@ header button{
     text-align: center;
     align-items: center;
 }
+.ready h1{
+    font-size: 3em;
+    line-height: 1.5em;
+}
+.ready-btn{
+    padding: 1em 9em;
+}
 footer{
     background-color: var(--Very-Dark-Cyan);
     padding: 10em var(--padding);
@@ -224,35 +249,22 @@ footer::before {
     top: -53px;
     left: 0;
 }
-/* i'm back */
-@media (min-width:1339px){
-    .intro-text{
-        margin: 7em 0;
+@media (max-width:700px){
+    .whole-container{
+        text-align: center;
     }
-    .intro-text h1{
-        font-size: 3.8em;
+    .statistics-numbers{
+        flex-direction: column;
+        gap: 3em;
     }
-    .intro-text p{
-        padding: 1em 32em;
+    .grow-together,.flowing-conversations,.your-users{
+        flex-direction: column;
     }
-    .intro-text button{
-        padding: 1em 5.5em;
+    footer{
+        flex-direction: column;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* i'm back */
 
 
 .attribution {
