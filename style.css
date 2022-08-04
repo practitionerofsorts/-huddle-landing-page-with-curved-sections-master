@@ -42,9 +42,12 @@ body{
 }
 header{
     display: flex;
+    margin-bottom: 4em;
     align-items: center;
     padding: var(--padding);
-    justify-content: space-between;
+}
+header img{
+    margin-right: auto;
 }
 header button{
     cursor: pointer;
@@ -62,13 +65,15 @@ header button{
     align-items: center;
 }
 .intro-text h1{
-    font-size: 3.6em;
+    font-size: 3em;
     line-height: 1.3em;
+    padding-left: 1em;
 }
 .intro-text p{
     line-height: 1.3em;
-    font-size: 2.5rem;
-    margin: 0 3.9em;
+    font-size: 1.5rem;
+    max-width: 30em;
+    margin: 0 auto;
 }
 /* the intro text button */
 .get-started{
@@ -76,7 +81,7 @@ header button{
     border-radius: 23px;
     color: white;
     background-color: var(--Pink);
-    padding: 1em 5.5em;
+    padding: 1em 8em;
 }
 /* statistics section */
 .statistics{
@@ -127,7 +132,7 @@ header button{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3em;
+    padding: 3em;;
     position: relative;
     line-height: 1.5em;
     font-size: 1.5rem;
@@ -207,20 +212,23 @@ header button{
     padding: 1em 9em;
 }
 footer{
-    background-color: var(--Very-Dark-Cyan);
-    padding: 10em var(--padding);
-    padding-bottom: 0;
-    gap: 4em;
-    color: white;
+    padding: 8em var(--padding);
+    gap: 8em;
     display: flex;
+    justify-content: space-between;
     flex-direction: row-reverse;
     position: relative;
+    font-size: 1.3rem;
+    line-height: 1.5em;
+    color: white;
+    background-color: var(--Very-Dark-Cyan);
 }
 .contacts{
     display: flex;
     flex-direction: column;
     gap: 1em;
-    margin: 2em 0;
+    margin: 1em 0;
+    margin-bottom: 0;
 }
 .phone,.email{
     display: flex;
@@ -236,7 +244,49 @@ footer{
 }
 .footer-logo{
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(165deg) brightness(109%) contrast(101%);
-    margin-bottom: 1em;
+    margin-bottom: 1.9em;
+}
+.newsletter,.huddle{
+    max-width: 500px;
+}
+.newsletter h1{
+    margin: 11px 0 .9em;
+}.newsletter p{
+    padding-right: 3em;
+    margin-bottom: 2em;
+}
+.newsletter form{
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+.email-column{
+    display: flex;
+    width: 70%;
+    height: 50px;
+    flex-direction: column;
+}
+.email-column p{
+    color: var(--Light-Red);
+    font-size: .9rem;
+}
+.newsletter input[type= email]{
+    max-width: 500px;
+    padding: 1em;
+}
+.newsletter input[type = email]::placeholder{
+    color: var(--Very-Dark-Cyan);
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+.newsletter button{
+    padding: .8em 2em;
+    height: 3.5em;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    background-color: var(--Pink);
 }
 footer::before {
     content: '';
@@ -248,10 +298,64 @@ footer::before {
     position: absolute;
     top: -53px;
     left: 0;
+    z-index: -1;
+}
+/* All Hover and focus states States */
+header button:hover, .get-started:hover,.newsletter button:hover{
+    transition: .3s ease;
+    cursor: pointer;
+}
+header button:hover{
+    color: var(--Light-Pink);
+    border:2px solid var(--Light-Pink);
+}
+.newsletter button:hover{
+    background-color: var(--Light-Pink);
+}
+.get-started:hover{
+    background-color: var(--Light-Pink);
+}
+.newsletter input[type = email]:focus{
+    outline: 2px solid var(--Pink);
+}
+/* pseudo classes */
+.newsletter input[type = email].red {
+    outline: 2px solid var(--Light-Red);
+}
+@media  (min-width:700px) and (max-width:900px) {
+    .email-column{
+        width: 100%;
+    }
 }
 @media (max-width:700px){
     .whole-container{
         text-align: center;
+    }
+    header{
+        flex-wrap: wrap;
+    }
+    header img{
+        margin-bottom: 1em;
+        width: 6em;
+    }
+    header button{
+        padding: .5em 1em;
+        font-size: .7em;
+    }
+    .intro-text{
+        padding: 0 1em;
+    }
+    .intro-text h1{
+        font-size: 1.5rem;
+        padding-left: 0;
+        padding: 0 1em;
+    }
+    .intro-text p{
+        font-size: 1em;
+        margin-bottom: 2em;
+    }
+    .get-started{
+        padding: 1em 3.5em;
     }
     .statistics-numbers{
         flex-direction: column;
@@ -259,18 +363,82 @@ footer::before {
     }
     .grow-together,.flowing-conversations,.your-users{
         flex-direction: column;
+        padding: 6em 1em;
+        font-size: 1em;
+    }
+    .grow-together,.flowing-conversations,.your-users{
+        flex-direction: column-reverse;
+    }
+    .ready h1{
+        font-size: 1.5em;
     }
     footer{
+        gap: 5em;
+        font-size: 1em;
+        text-align: left;
         flex-direction: column;
+        padding-top: 2em;
+    }
+    .footer-logo{
+        width: 12em;
+    }
+    .newsletter form{
+        flex-direction: column;
+    }
+    .email-column{
+        width: 100%;
+    }
+    .newsletter form button{
+        padding: .8em 4em;
+        align-self: flex-end;
+    }
+}
+@media (max-width:380px){
+    .grow-together::before{
+        background: url('images/bg-section-top-mobile-1.svg') no-repeat center top;
+        background-size: contain;
+    }
+    .grow-together::after{
+        background: url('images/bg-section-bottom-mobile-1.svg') no-repeat center top;
+        background-size: contain;
+    }
+    .your-users::before{
+        top: -102px;
+        background: url('images/bg-section-top-mobile-2.svg') no-repeat center top;
+        background-size: 100% 102px;
+    }
+    .your-users::after{
+        background: url('images/bg-section-bottom-mobile-2.svg') no-repeat center top;
+        background-size: contain;
+    }
+    footer::before{
+        content: url("images/bg-footer-top-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 112px;
     }
 }
 /* i'm back */
 
-
+.second-footer{
+    background-color: var(--Very-Dark-Cyan);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
 .attribution {
     font-size: 11px;
     text-align: center;
 }
 .attribution a {
     color: hsl(228, 45%, 44%); 
+}
+.attribution .inspo{
+    font-size: .6em;
+    font-style: italic;
+    text-decoration: underline dotted yellow;
+}
+.attribution .inspo a{
+    color: orange;
 }
