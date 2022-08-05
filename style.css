@@ -265,7 +265,7 @@ footer{
 }
 .email-column{
     display: flex;
-    width: 65%;
+    width: 50%;
     height: 50px;
     flex-direction: column;
 }
@@ -393,9 +393,6 @@ header button:hover{
     .newsletter form button{
         padding: .8em 4em;
         align-self: flex-end;
-    }
-    .newsletter-text{
-        padding-right: 0;
     }
 }
 @media (max-width:380px){
