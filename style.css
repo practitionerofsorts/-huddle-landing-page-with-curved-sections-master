@@ -42,7 +42,7 @@ body{
 }
 header{
     display: flex;
-    margin-bottom: 4em;
+    margin-bottom: 8em;
     align-items: center;
     padding: var(--padding);
 }
@@ -65,29 +65,31 @@ header button{
     align-items: center;
 }
 .intro-text h1{
-    font-size: 3em;
+    font-size: 3.3em;
     line-height: 1.3em;
-    padding-left: 1em;
+    margin-bottom: .3em;
 }
 .intro-text p{
     line-height: 1.3em;
     font-size: 1.5rem;
     max-width: 30em;
-    margin: 0 auto;
+    margin: 0 auto .5em;
 }
 /* the intro text button */
 .get-started{
     border: none;
-    border-radius: 23px;
+    border-radius: 50px;
+    padding: 1.5em 8em;
+    font-size: 1.1rem;
+    margin-bottom: 4em;
     color: white;
     background-color: var(--Pink);
-    padding: 1em 8em;
 }
 /* statistics section */
 .statistics{
     gap: 5em;
     display: flex;
-    margin: 4em 2em 10em;
+    margin:0 2em 17em;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +99,7 @@ header button{
     width: 100%;
 }
 .statistics-numbers{
-    width: 100%;
+    width: 70%;
     display: flex;
     text-align: center;
     align-items: center;
@@ -124,7 +126,7 @@ header button{
     margin-left: -8.5em;
 }
 .individual-stats h1{
-    font-size: 4.7em;
+    font-size: 4em;
 } 
 /* grow together section */
 .grow-together,.flowing-conversations,.your-users{
@@ -135,7 +137,7 @@ header button{
     padding: 3em;;
     position: relative;
     line-height: 1.5em;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
 }
 .grow-together h2,.flowing-conversations h2,.your-users h2{
     margin-bottom: 1em;
@@ -209,16 +211,16 @@ header button{
     line-height: 1.5em;
 }
 .ready-btn{
-    padding: 1em 9em;
+    padding: 1.5em 9em;
 }
 footer{
     padding: 8em var(--padding);
-    gap: 8em;
+    gap: 6em;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     position: relative;
-    font-size: 1.3rem;
+    /* font-size: 1rem; */
     line-height: 1.5em;
     color: white;
     background-color: var(--Very-Dark-Cyan);
@@ -251,18 +253,19 @@ footer{
 }
 .newsletter h1{
     margin: 11px 0 .9em;
-}.newsletter p{
-    padding-right: 3em;
+}.newsletter-text{
+    padding-left: .1em;
+    padding-right: 10em;
     margin-bottom: 2em;
 }
 .newsletter form{
     display: flex;
-    gap: 2em;
+    gap: 1.5em;
     flex-wrap: wrap;
 }
 .email-column{
     display: flex;
-    width: 70%;
+    width: 65%;
     height: 50px;
     flex-direction: column;
 }
@@ -298,7 +301,6 @@ footer::before {
     position: absolute;
     top: -53px;
     left: 0;
-    z-index: -1;
 }
 /* All Hover and focus states States */
 header button:hover, .get-started:hover,.newsletter button:hover{
@@ -391,6 +393,9 @@ header button:hover{
     .newsletter form button{
         padding: .8em 4em;
         align-self: flex-end;
+    }
+    .newsletter-text{
+        padding-right: 0;
     }
 }
 @media (max-width:380px){
