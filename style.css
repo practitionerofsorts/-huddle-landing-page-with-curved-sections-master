@@ -27,15 +27,16 @@
 /* max width for the mini sections images */
 --max-width-img: 500px;
 }
+body{
+    font-family: 'Open Sans', sans-serif;
+    transition: 1.5s ease;
+    line-height: 1.5em;
+    min-height: 100vh;
+}
 h1,
 h2,
 h3{
     font-family: 'Poppins', sans-serif;
-}
-body{
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.5em;
-    min-height: 100vh;
 }
 .whole-container{
     min-height: 100vh;
@@ -82,6 +83,7 @@ header button{
     color: white;
     background-color: var(--Pink);
     padding: 1em 8em;
+    box-shadow:  0px 2px 4px hsla(0, 0%, 0%, .3);
 }
 /* statistics section */
 .statistics{
@@ -124,8 +126,11 @@ header button{
     margin-left: -8.5em;
 }
 .individual-stats h1{
-    font-size: 4.7em;
+    font-size: 3.5em;
 } 
+.individual-stats p{
+    opacity: .5;
+}
 /* grow together section */
 .grow-together,.flowing-conversations,.your-users{
     gap: 5em;
@@ -210,9 +215,10 @@ header button{
 }
 .ready-btn{
     padding: 1em 9em;
+    box-shadow:  0px 2px 4px hsla(0, 0%, 0%, .3);
 }
 footer{
-    padding: 8em var(--padding);
+    padding: 8em 5em;
     gap: 8em;
     display: flex;
     justify-content: space-between;
@@ -228,7 +234,7 @@ footer{
     flex-direction: column;
     gap: 1em;
     margin: 1em 0;
-    margin-bottom: 0;
+    margin-bottom: 3em;
 }
 .phone,.email{
     display: flex;
@@ -257,12 +263,12 @@ footer{
 }
 .newsletter form{
     display: flex;
-    gap: 2em;
+    gap: 1.3em;
     flex-wrap: wrap;
 }
 .email-column{
     display: flex;
-    width: 70%;
+    width: 60%;
     height: 50px;
     flex-direction: column;
 }
@@ -300,6 +306,28 @@ footer::before {
     left: 0;
     z-index: -1;
 }
+.socials{
+    display: flex;
+    gap: 1em;
+}
+.social-box{
+    height: 1.5em;
+    width: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 2px;
+}
+.social-box .facebook{
+    align-self: flex-end ;
+    margin-right: 4px;
+}
+.icon{
+    color: var(--Very-Dark-Cyan);
+}
 /* All Hover and focus states States */
 header button:hover, .get-started:hover,.newsletter button:hover{
     transition: .3s ease;
@@ -317,6 +345,9 @@ header button:hover{
 }
 .newsletter input[type = email]:focus{
     outline: 2px solid var(--Pink);
+}
+.social-box:hover{
+    background-color: #1DA1F2;
 }
 /* pseudo classes */
 .newsletter input[type = email].red {
@@ -428,7 +459,7 @@ header button:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 .attribution {
     font-size: 11px;
