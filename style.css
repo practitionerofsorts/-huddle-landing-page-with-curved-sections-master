@@ -275,7 +275,7 @@ footer{
     padding: 1em;
 }
 .newsletter input[type = email]::placeholder{
-    color: var(--Very-Dark-Cyan);
+    color: var(--Light-Red);
     font-family: inherit;
     font-weight: 600;
     letter-spacing: .1em;
